@@ -1,121 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>小孙同学</title>
-    <meta name="language" content="zh-CN">
-    <meta name="title" content="小孙同学">
-    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
-    <meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
-    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            background-color: pink;
-
-        }
-
-        #frame {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            margin: 250px auto;
-        }
-
-        .left,
-        .right {
-            top: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        .left {
-            left: 35px;
-
-        }
-
-        .right {
-            right: 35px;
-            z-index: -1;
-        }
-
-        .bottom {
-            bottom: 36px;
-            left: 100px;
-            width: 200px;
-            height: 200px;
-            transform: rotate(45deg);
-            z-index: -1;
-
-        }
-
-        .heart {
-            position: absolute;
-            box-shadow: 0 0 40px #d5093c;
-            animation: beat .4s ease infinite normal;
-            background: linear-gradient(-90deg, #F50A45 0%, #d5093c 40%);
-        }
-
-        @keyframes beat {
-            0% {
-                transform: scale(1) rotate(225deg);
-                box-shadow: 0 0 40px #d5093c;
-            }
-
-            50% {
-                transform: scale(1.1) rotate(225deg);
-                box-shadow: 0 0 70px #d5093c;
-            }
-
-            100% {
-                transform: scale(1) rotate(225deg);
-                box-shadow: 0 0 40px #d5093c;
-                ;
-            }
-        }
-
-        .word {
-            position: absolute;
-            width: 50%;
-            top: 75%;
-            left: 25%;
-            text-align: center;
-            transform: translateY(-50%);
-            font-family: 'Love Ya Like A Sister', cursive;
-            font-size: 40px;
-            color: #c70012;
-            padding: 0 20px;
-        }
-    </style>
-</head>
-
+<html>
+<head></head>
 <body>
+<earc lang="zh-CN">
 
-    <div id="frame">
-        <div class="heart left"></div>
-        <div class="heart right"></div>
-        <div class="heart bottom"></div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具箱</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <div class="main-container">
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="按任意键直接开始搜索">
+        </div>
+        <div class="filter-buttons-container">
+            <ul class="filter-list">
+                <!-- 分类 后续可变化 -->
+                <li>
+                    <button class="filter-button main active">全部工具</button>
+                </li>
+                <li>
+                    <button class="filter-button">常用网站</button>
+                </li>
+                <li>
+                    <button class="filter-button">在线工具</button>
+                </li>
+                <li>
+                    <button class="filter-button">文档</button>
+                </li>
+                <li>
+                    <button class="filter-button">开发工具</button>
+                </li>
+                <li>
+                    <button class="filter-button">AI网站</button>
+                </li>
+                <li>
+                    <button class="filter-button">其他</button>
+                </li>
+                <button class="add_website">添加网站</button>
+                <!-- <li><button class="filter-button">添加网站</button></li> -->
+            </ul>
+        </div>
+
+        <div class="content_wrapper">
+            <ul class="tool-list">
+                <li class="tool-item">
+                    <a href="https://www.baidu.com" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://www.baidu.com/favicon.ico" alt="百度">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">百度</h3>
+                            <span class="tool-category">常用网站</span>
+                        </div>
+                    </a>
+
+
+                </li>
+                <li class="tool-item">
+                    <a href="https://www.json.cn" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://www.json.cn/favicon.ico" alt="JSON格式化工具">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">json格式化工具</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://base64.us" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://base64.us/favicon.ico" alt="Base64编解码">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">Base64编解码</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li class="tool-item">
+                    <a href="https://chat.deepseek.com/" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://deepseek.com/favicon.ico" alt="deepseek">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">deepseek</h3>
+                            <span class="tool-category">AI网站</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item">
+                    <a href="https://yiyan.baidu.com" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://nlp-eb.cdn.bcebos.com/logo/favicon.ico" alt="文心一言">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">文心一言</h3>
+                            <span class="tool-category">AI网站</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item">
+                    <a href="https://www.67tool.com/" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://www.67tool.com//favicon.ico" alt="即时工具">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">即时工具</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li class="tool-item">
+                    <a href="https://yuanbao.tencent.com/" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://cdn-bot.hunyuan.tencent.com/logo-v2.png" alt="元宝">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">元宝</h3>
+                            <span class="tool-category">AI网站</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://www.zjnav.cc/daohang" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://www.zjnav.cc/iconsy/ico.png" alt="终极导航">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">终极导航</h3>
+                            <span class="tool-category">开发工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://gitee.com/" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://gitee.com//favicon.ico" alt="Gitee">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">Gitee</h3>
+                            <span class="tool-category">开发工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"
+                                 alt="HTML文档">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">HTML文档</h3>
+                            <span class="tool-category">文档</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"
+                                 alt="css文档">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">css文档</h3>
+                            <span class="tool-category">文档</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"
+                                 alt="js文档">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">js文档</h3>
+                            <span class="tool-category">文档</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://www.doubao.com/chat" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/web/logo-icon.png"
+                                 alt="豆包">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">豆包</h3>
+                            <span class="tool-category">AI网站</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://tool.lu/" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://tool.lu//favicon.ico" alt="各种工具toollu">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">各种工具toollu</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://fanyi.youdao.com" class="tool-card">
+                        <div class="tool-icon">
+                            <img src="https://fanyi.youdao.com/favicon.ico" alt="有道翻译">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">有道翻译</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://www.aconvert.com/cn/icon/png-to-ico" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://www.aconvert.com/favicon.ico" alt="图片格式转换">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">图片格式转换</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://dazi.co/index" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://ama-static.floatai.cn/askmanyai/prod/favicon.ico" alt="各种ai模型合集">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">各种ai模型合集</h3>
+                            <span class="tool-category">AI网站</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://www.alltoall.net/" class="tool-card" target="_blank">
+                        <div class="tool-icon">
+                            <img src="https://www.alltoall.net/qfy-content/uploads/2022/07/b42759ab5cf74aa8f1ce08d1317b6940.jpg"
+                                 alt="PDF转WORD">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">PDF转WORD</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://curlconverter.com/" class="tool-card">
+                        <div class="tool-icon">
+                            <img src="https://curlconverter.com//favicon.ico" alt="curl转换代码">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">curl转换代码</h3>
+                            <span class="tool-category">在线工具</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="tool-item">
+                    <a href="https://www.buildcores.com/" class="tool-card">
+                        <div class="tool-icon">
+                            <img src="https://www.buildcores.com/icon.png?1d1e0dcdc2fcd63a" alt="Pc组装">
+                        </div>
+                        <div class="tool-info">
+                            <h3 class="tool-title">Pc组装</h3>
+                            <span class="tool-category">其他</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </div>
+    <script src="js/flexible.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/add-website.js"></script>
 
-    <b class="word">每次遇见你都心跳加速!</b>
 
-    <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
-        <source src="http://music.163.com/song/media/outer/url?id=526464145.mp3" />
-    </audio>
-
-    <script>
-        var b = document.body;
-        var c = document.getElementsByTagName('canvas')[0];
-        var a = c.getContext('2d');
-        document.body.clientWidth;
-        with (m = Math) C = cos, S = sin, P = pow, R = random; c.width = c.height = f = 600; h = -250; function p(a, b, c) { if (c > 60) return [S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50, b * f + 50, 625 + C(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) + b * 400, a * 1 - b / 2, a]; A = a * 2 - 1; B = b * 2 - 1; if (A * A + B * B < 1) { if (c > 37) { n = (j = c & 1) ? 6 : 4; o = .5 / (a + .01) + C(b * 125) * 3 - a * 300; w = b * h; return [o * C(n) + w * S(n) + j * 610 - 390, o * S(n) - w * C(n) + 550 - j * 350, 1180 + C(B + A) * 99 - j * 300, .4 - a * .1 + P(1 - B * B, -h * 6) * .15 - a * b * .4 + C(a + b) / 5 + P(C((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) * .1 * (1 - B * B), o / 1e3 + .7 - o * w * 3e-6] } if (c > 32) { c = c * 1.16 - .15; o = a * 45 - 20; w = b * b * h; z = o * S(c) + w * C(c) + 620; return [o * C(c) - w * S(c), 28 + C(B * .5) * 99 - b * b * b * 60 - z / 2 - h, z, (b * b * .3 + P((1 - (A * A)), 7) * .15 + .3) * b, b * .7] } o = A * (2 - b) * (80 - c * 2); w = 99 - C(A) * 120 - C(b) * (-h - c * 4.9) + C(P(1 - b, 7)) * 50 + c * 2; z = o * S(c) + w * C(c) + 700; return [o * C(c) - w * S(c), B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450, z, (1 - b / 1.2) * .9 + a * .1, P((1 - b), 20) / 4 + .05] } } setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
-    </script>
+</earc>
 </body>
-
 </html>
